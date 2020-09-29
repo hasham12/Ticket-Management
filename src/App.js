@@ -6,10 +6,12 @@ import './App.css';
 import Header from './components/screens/Header'
 import Login from './components/screens/Login'
 import Error from './components/screens/Error'
+import Menu from './components/screens/Header'
 
 function App() {
   return (
     <>
+
         <Switch>
           <Route exact path='/' component={Login} />
           <Route path='/Home' component={Header} />

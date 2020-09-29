@@ -6,7 +6,9 @@ import {Link} from "react-router-dom";
 export default class MenuExampleSecondaryPointing extends Component {
   state = { activeItem: 'home' }
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+//   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
+handleItemClick = (e ) => this.setState({ activeItem: e })
 
   render() {
     const { activeItem } = this.state
@@ -17,13 +19,13 @@ export default class MenuExampleSecondaryPointing extends Component {
           <Menu.Item
             name='home'
             active={activeItem === 'home'}
-            onClick={this.handleItemClick}
+            onClick={()=>this.handleItemClick('home')}
             // as={Link} to={''}
           />
           <Menu.Item
             name='messages'
             active={activeItem === 'messages'}
-            onClick={this.handleItemClick}
+            onClick={()=>this.handleItemClick('messages')}
             >
                 
             </Menu.Item>
@@ -46,6 +48,10 @@ export default class MenuExampleSecondaryPointing extends Component {
             />
           </Menu.Menu>
         </Menu>
+
+        
+        {this.state.activeItem == 'home' ? <div>Home</div> : null}
+        
 
     
       </div>
