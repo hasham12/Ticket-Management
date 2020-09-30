@@ -15,6 +15,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Login} />
           <Route path='/Home' component={Header} />
+          <Route path='/SignUp' component={Header} />
           <Route component={Error} />
         </Switch>
     

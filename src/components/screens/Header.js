@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Menu, Segment } from 'semantic-ui-react'
 import {Link} from "react-router-dom";
+import Error from './Error'
 
 
 export default class MenuExampleSecondaryPointing extends Component {
@@ -32,12 +33,14 @@ handleItemClick = (e ) => this.setState({ activeItem: e })
           <Menu.Item
             name='friends'
             active={activeItem === 'friends'}
-            onClick={this.handleItemClick}
+            // onClick={this.handleItemClick}
+            onClick={()=>this.handleItemClick('friends')}
           />
           <Menu.Item
             name='Create Ticket'
             active={activeItem === 'Create Ticket'}
-            onClick={this.handleItemClick}
+            // onClick={this.handleItemClick}
+            onClick={()=>this.handleItemClick('Create Ticket')}
           />
           <Menu.Menu position='right'>
             <Menu.Item
@@ -50,7 +53,12 @@ handleItemClick = (e ) => this.setState({ activeItem: e })
         </Menu>
 
         
-        {this.state.activeItem == 'home' ? <div>Home</div> : null}
+        {
+        this.state.activeItem == 'home' ? <div>Home</div> : 
+        this.state.activeItem == 'messages' ? <div>Message</div>:
+        this.state.activeItem == 'friends' ? <div>Friends</div>:
+        this.state.activeItem == 'Create Ticket' ? <div>Message</div>: null
+        }
         
 
     
