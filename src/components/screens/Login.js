@@ -30,7 +30,7 @@ export default class Login extends React.Component{
                 </Segment>
               </Form>
               <Message>
-                New to us? <a href='#'>Sign Up</a> or <a href="#">Forget Password</a>
+                New to us? <a href='/SignUp'>Sign Up</a> or <a href="/ForgetPass">Forget Password</a>
               </Message>
             </Grid.Column>
           </Grid>

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Menu, Segment } from 'semantic-ui-react'
 import {Link} from "react-router-dom";
 import Error from './Error'
+import Home from './Home'
 
 
 export default class MenuExampleSecondaryPointing extends Component {
@@ -54,7 +55,7 @@ handleItemClick = (e ) => this.setState({ activeItem: e })
 
         
         {
-        this.state.activeItem == 'home' ? <div>Home</div> : 
+        this.state.activeItem == 'home' ? <Home/> : 
         this.state.activeItem == 'messages' ? <div>Message</div>:
         this.state.activeItem == 'friends' ? <div>Friends</div>:
         this.state.activeItem == 'Create Ticket' ? <div>Message</div>: null

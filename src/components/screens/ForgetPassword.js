@@ -1,13 +1,8 @@
 import React from 'react'
-import { Button, Form, Grid, Header, Image, Message, Segment, Select } from 'semantic-ui-react'
+import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
 
-const options = [
-  { key: 'c', text: 'Client', value: 'client' },
-  { key: 'm', text: 'Manager', value: 'manager' },
-  { key: 'd', text: 'Developer', value: 'developer' },
-]
 
-export default class SignUp extends React.Component{
+export default class ForgetPassword extends React.Component{
     constructor(){
         super()
     }
@@ -25,23 +20,16 @@ export default class SignUp extends React.Component{
               </p>
               <Form size='large'>
                 <Segment stacked>
-                  <Form.Input fluid icon='user' iconPosition='left' placeholder='Name' />
-                  <Form.Input type="password" fluid icon='key' iconPosition='left' placeholder='Password' />
                   <Form.Input fluid icon='mail' iconPosition='left' placeholder='E-mail address' />
-                  {/* <span  icon='users' >  */}
-                  <Form.Select fluid iconPosition='left' options={options} placeholder='Select Type'   control={Select} /> 
-                  {/* </span> */}
-                 
                   
-        
                   <Button color='teal' fluid size='large'>
                     Try For Free
                   </Button>
                 </Segment>
               </Form>
-              <Message>
+              {/* <Message>
                 Already Register? <a href='/'>Login</a> or <a href="#">Forget Password</a>
-              </Message>
+              </Message> */}
             </Grid.Column>
           </Grid>
 

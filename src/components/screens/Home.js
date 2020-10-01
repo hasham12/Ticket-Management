@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Cards from './Card'
 
 const Home = () => {
     return(
-        <h1>I am Home Page</h1>
+        <Cards/>
     )
 }
 
