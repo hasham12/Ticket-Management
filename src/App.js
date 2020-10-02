@@ -10,6 +10,7 @@ import Menu from './components/screens/Header'
 import SignUp from './components/screens/SignUp'
 import ForgetPass from './components/screens/ForgetPassword'
 import TestGet from './components/screens/TestGet'
+import drop from './components/screens/Drop'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/SignUp' component={SignUp} />
           <Route path='/ForgetPass' component={ForgetPass}/>
           <Route  path='/Test' component={TestGet}/>
+          <Route path='/drop' component={drop}/>
           <Route component={Error} />
         </Switch>
     
