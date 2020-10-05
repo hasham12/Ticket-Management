@@ -23,7 +23,7 @@ export default class Login extends React.Component{
         console.log(res.data);
         window.location = '/Home'
       }).catch(err => {
-        alert(err);
+        alert('Error Bhai...');
       })
     }
 

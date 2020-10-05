@@ -21,7 +21,6 @@ export default class SignUp extends React.Component{
     };
 
     handleSubmit = event => {
-      // event.preventDefault();
       const data = {
         Name : this.state.Name,
         Email : this.state.Email,
@@ -33,6 +32,8 @@ export default class SignUp extends React.Component{
         console.log(res);
         console.log(res.data);
         window.location = '/'
+      }).catch(err => {
+        alert(err);
       })
     }
 
