@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Modal } from 'semantic-ui-react'
 import CreateProjectFrom from './CreateProjectForm'
-import card from './Card'
+import Card from './AfterCreateProject'
 
 export default class ModalForm extends React.Component{
     constructor(props){

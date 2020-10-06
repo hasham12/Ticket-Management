@@ -3,7 +3,8 @@ import { Menu, Segment } from 'semantic-ui-react'
 import {Link} from "react-router-dom";
 import Error from './Error'
 import Home from './Home'
-
+import ViewProject from './ViewProjectCardTiles'
+import CardsA from './AfterCreateProject'
 
 export default class MenuExampleSecondaryPointing extends Component {
   state = { activeItem: 'home' }
@@ -25,17 +26,17 @@ handleItemClick = (e ) => this.setState({ activeItem: e })
             // as={Link} to={''}
           />
           <Menu.Item
-            name='messages'
-            active={activeItem === 'messages'}
-            onClick={()=>this.handleItemClick('messages')}
+            name='View Projects'
+            active={activeItem === 'View Projects'}
+            onClick={()=>this.handleItemClick('View Projects')}
             >
                 
             </Menu.Item>
           <Menu.Item
-            name='friends'
-            active={activeItem === 'friends'}
+            name='CardsA'
+            active={activeItem === 'CardsA'}
             // onClick={this.handleItemClick}
-            onClick={()=>this.handleItemClick('friends')}
+            onClick={()=>this.handleItemClick('CardsA')}
           />
           <Menu.Item
             name='Create Ticket'
@@ -56,8 +57,8 @@ handleItemClick = (e ) => this.setState({ activeItem: e })
         
         {
         this.state.activeItem == 'home' ? <Home/> : 
-        this.state.activeItem == 'messages' ? <div>Message</div>:
-        this.state.activeItem == 'friends' ? <div>Friends</div>:
+        this.state.activeItem == 'View Projects' ? <ViewProject/>:
+        this.state.activeItem == 'CardsA' ? <CardsA/>:
         this.state.activeItem == 'Create Ticket' ? <div>Message</div>: null
         }
         

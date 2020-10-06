@@ -101,7 +101,8 @@ import {
                 />
             </Form.Field>
           </Form.Group>
-          <Button primary type="submit" onClick={this.handleSubmit}>
+          {/* <Button primary type="submit" onClick={this.handleSubmit}> */}
+          <Button primary type="submit" onClick={this.props.handleSubmitForm} >
             Submit
           </Button>
           <Button onClick={this.clearUserForm}>Clear</Button>

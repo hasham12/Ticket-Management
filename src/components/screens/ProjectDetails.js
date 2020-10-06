@@ -1,5 +1,5 @@
 import React from 'react'
-import Cards from './Card'
+import Cards from './AfterCreateProject'
 import ModalForm from './Modal'
 import Parent from './Parent'
 import FormP from './CreateProjectForm'
@@ -7,7 +7,7 @@ import AccordinProjectForm from './AccordinProjectForm'
 import ViewTickets from './ViewTicket'
 import { Header, Table, Rating, Container } from 'semantic-ui-react'
 
-export default class Home extends React.Component{
+export default class ProjectDetail extends React.Component{
     state ={
         Modal: false
     };
